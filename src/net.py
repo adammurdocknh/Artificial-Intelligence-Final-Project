@@ -24,7 +24,7 @@ win_ratio_sheet = mainSheet[:,15:]
 print(np.size(weights))
 # 1000 235.37
 
-cycles = 1000
+cycles = 100
 
 avgWin = np.mean(win_ratio_sheet)
 
@@ -54,7 +54,7 @@ for i in range(cycles):
     
 
     finalPredition = prediction
-    if i % (cycles/100) == 0:
+    if i % (cycles/10) == 0:
         
         print('Cycle i:', i)
         print('Target:', avgWin)
